@@ -65,10 +65,25 @@
         <div class="text-center text-body" style="padding-top: 50px">
           <h1>Heyy Please Login</h1>
         </div>
-        <form class="login">
+        <form class="login" onsubmit="loginSubmit(event)">
+          <div class="mb-3">
+            <label for="exampleInputName" class="form-label"
+              >Email username</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputName"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+            <p id="nameError" style="color: red;"></p>
+          </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
+              >Email Email</label
             >
             <input
               type="email"
@@ -76,9 +91,8 @@
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
+
+            <p id="emailError" style="color: red;"></p>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"
@@ -90,6 +104,8 @@
               id="exampleInputPassword1"
             />
           </div>
+          <p id="passwordError" style="color: red;"></p>
+
           <div class="mb-3 form-check">
             <input
               type="checkbox"
@@ -124,5 +140,6 @@
         </div>
       </div>
     </div>
+    <script src="Login.js"></script>
   </body>
 </html>
